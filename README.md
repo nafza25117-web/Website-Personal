@@ -1,9 +1,6 @@
 # Website-SMC
 WEB
-
-<!DOCTYPE html>![Uploading smc2.png…]()
-![s](https://github.com/user-attachments/assets/b5f90542-9fc3-4e6e-b8f4-b24efb8e6828)
-
+<!DOCTYPE html>!
 <html lang="id">
 <head>
     <meta charset="UTF-8">
