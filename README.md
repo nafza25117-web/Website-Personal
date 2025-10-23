@@ -1,6 +1,6 @@
 # Website-SMC
 WEB
-<img width="444" height="303" alt="lokasi" src="https://github.com/user-attachments/assets/ad46a46f-cd4b-4e0e-b2a2-7cb066c98db6" />
+
 <!DOCTYPE html>![Uploading smc2.png…]()
 ![s](https://github.com/user-attachments/assets/b5f90542-9fc3-4e6e-b8f4-b24efb8e6828)
 
