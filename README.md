@@ -1,6 +1,7 @@
-# Website-SMC
+#Web-Personal
 WEB
-<!DOCTYPE html>!
+![Uploading smc2.png…]()
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
