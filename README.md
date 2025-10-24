@@ -1,13 +1,438 @@
-#Website-Personal
+[index.html](https://github.com/user-attachments/files/23126860/index.html)#Website-Personal
 WEB
-![e](https://github.com/user-attachments/assets/7c6e1f21-4501-4814-993c-8ae509b1e4bc)
-[halaman2.html](https://github.com/user-attachments/files/23126257/halaman2.html)
-![alatmedis](https://github.com/user-attachments/assets/d765acd6-ecad-4aab-bf63-7a2ecb2e5ce7)
-[website.html](https://github.com/user-attachments/files/23126279/website.html)
-<img width="900" height="691" alt="smc2" src="https://github.com/user-attachments/assets/f767bc19-cac8-430f-a2fd-28d1c45cb5a0" />
-![s](https://github.com/user-attachments/assets/43da1db7-845c-4911-8f23-2d11f725ac77)
-<img width="444" height="303" alt="lokasi" src="https://github.com/user-attachments/assets/bd4a1153-7d6b-4ec6-9f13-47527baaaf94" />
-<img width="473" height="528" alt="LOGO SMC" src="https://github.com/user-attachments/assets/4f03d973-505f-42e4-af21-9f75e6728fa6" />
-[index.html](https://github.com/user-attachments/files/23126261/index.html)
-![i](https://github.com/user-attachments/assets/59fd9a65-bdfe-4fb2-a1c2-458ef6706446)
-![bg1](https://github.com/user-attachments/assets/60b27fd2-62d5-493b-9587-e06380f502b3)
+[Uploa<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Page Sederhana - Selamat Datang</title>
+    <style>      
+        body {
+            background-image: url('alatmedis.jpg');     
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center center;
+            background-attachment: fixed; 
+            text-align: center;  
+            min-height: 100vh;            
+            display: flex;                 
+            align-items: center;                
+            justify-content: center;                 
+            height: 100vh;     
+            margin: 0;
+        }
+
+        .cover-content {
+            background-color: rgba(255, 255, 255, 0.95); 
+            padding: 50px 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-in-out;     
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #1d3557; 
+            margin-bottom: 0.2em;
+            text-align: center;
+        }
+        h2{
+            font-size: 2em;
+            color: #1d3557; 
+            margin-bottom: 0.2em;
+            margin-top: 0;
+            text-align: center;
+        }
+        p.tagline {
+            font-size: 1.2em;
+            color: #457b9d; 
+            margin-top: 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #5d9ce4; 
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            
+        }
+
+        .cta-button:hover {
+            background-color: #24a74b;
+            transform: translateY(-3px); 
+            text-align: center; 
+   
+        }
+        
+        /* Animasi */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cover-content">
+        <h1>Welcome To Our Website</h1>
+        <h2>Klinik Rawat Inap Sidayu Medical Center</h2>
+        
+        <p class="tagline">Kami menyediakan layanan medis terbaik dengan sentuhan personal. Dipercayakan oleh ribuan keluarga,
+             kami berkomitmen menjaga Anda tetap sehat dan prima.</p>
+        
+        <a href="halaman2.html" class="cta-button">
+            Mulai Sekarang Juga
+        </a>
+    </div>
+
+</body>
+</html>ding index.html…]()
+
+[Uploading ___vscode_livepreview_injected_sc/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-env browser */
+
+/**
+ * Script injected by the VS Code Live Preview Extension.
+ * http://aka.ms/live-preview
+ */
+
+window.addEventListener('message', (event) => handleMessage(event), false);
+window.addEventListener('error', (event) => handleError(event), false);
+
+document.addEventListener('DOMContentLoaded', function (e) {
+	onLoad();
+});
+
+if (window.parent !== window) {
+	console.error = createConsoleOverride('ERROR');
+
+	console.log = createConsoleOverride('LOG');
+
+	console.warn = createConsoleOverride('WARN');
+
+	console.info = createConsoleOverride('INFO');
+
+	console.clear = createConsoleOverride('CLEAR');
+}
+
+/**
+ * @description run initialization on load.
+ */
+function onLoad() {
+	const connection = new WebSocket('ws://127.0.0.1:3001/47014df7b55553526ce0774d4df11a4a39e6a6a7');
+	connection.addEventListener('message', (e) => handleSocketMessage(e.data));
+
+	let onlyCtrlDown = false;
+
+	const commandPayload = {
+		path: window.location,
+		title: document.title,
+	};
+
+	// In embedded preview, tell the webview panel which page it is on now.
+	postParentMessage({
+		command: 'update-path',
+		text: JSON.stringify(commandPayload),
+	});
+
+	handleLinkHoverEnd();
+
+	const links = document.getElementsByTagName('a');
+	for (const link of links) {
+		// In embedded preview, all link clicks must be checked to see if the target page can be injected with this file's script.
+		link.addEventListener('click', (e) => handleLinkClick(e.target.href));
+		link.addEventListener('mouseenter', (e) =>
+			handleLinkHoverStart(e.target.href)
+		);
+		link.addEventListener('mouseleave', () => handleLinkHoverEnd());
+	}
+
+	document.addEventListener('keydown', (e) => {
+		onlyCtrlDown = (e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey;
+		if ((e.key == 'F' || e.key == 'f') && onlyCtrlDown) {
+			postParentMessage({
+				command: 'show-find',
+			});
+			return;
+		}
+		postParentMessage({
+			command: 'did-keydown',
+			key: {
+				key: e.key,
+				keyCode: e.keyCode,
+				code: e.code,
+				shiftKey: e.shiftKey,
+				altKey: e.altKey,
+				ctrlKey: e.ctrlKey,
+				metaKey: e.metaKey,
+				repeat: e.repeat,
+			},
+		});
+	});
+
+	document.addEventListener('keyup', (e) => {
+		onlyCtrlDown = (e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey;
+		postParentMessage({
+			command: 'did-keyup',
+			key: {
+				key: e.key,
+				keyCode: e.keyCode,
+				code: e.code,
+				shiftKey: e.shiftKey,
+				altKey: e.altKey,
+				ctrlKey: e.ctrlKey,
+				metaKey: e.metaKey,
+				repeat: e.repeat,
+			},
+		});
+	});
+}
+
+/**
+ * Helper function to insert a `postParentMesssage` call into console function calls.
+ * This will also send the printed information to the output channel if in embedded preview.
+ * @param {string} type the type of console log (e.g. info, warn, error, etc.).
+ */
+function createConsoleOverride(type) {
+	// Override console messages to allow the user to see console messages in the output channel (embedded preview only).
+	const consoleOverrides = {
+		ERROR: console.error,
+		LOG: console.log,
+		WARN: console.warn,
+		INFO: console.info,
+		CLEAR: console.clear,
+	};
+	return function (msg) {
+		let stringifiedMsg = 'undefined';
+
+		try {
+			stringifiedMsg = JSON.stringify(msg);
+			if (!stringifiedMsg) throw new Error('message is not in JSON format');
+		} catch (err) {
+			try {
+				stringifiedMsg = msg.toString();
+			} catch (err) {
+				// noop
+			}
+		}
+
+		const messagePayload = {
+			type: type,
+			data: stringifiedMsg,
+		};
+		postParentMessage({
+			command: 'console',
+			text: JSON.stringify(messagePayload),
+		});
+		consoleOverrides[type].apply(console, arguments);
+	};
+}
+
+/**
+ * Handle reload requests from WebSocket server.
+ * @param {any} data
+ */
+function handleSocketMessage(data) {
+	const parsedMessage = JSON.parse(data);
+	switch (parsedMessage.command) {
+		case 'reload': {
+			reloadPage();
+		}
+	}
+}
+
+/**
+ * Handle messages from the parent (specifically for embedded preview).
+ * @param {any} event
+ */
+function handleMessage(event) {
+	const message = event.data;
+
+	switch (message.command) {
+		case 'refresh':
+			reloadPage();
+			break;
+		case 'refresh-forced':
+			window.location.reload();
+			break;
+		case 'setup-parent-listener': {
+			const commandPayload = {
+				path: window.location,
+				title: document.title,
+			};
+
+			postParentMessage({
+				command: 'update-path',
+				text: JSON.stringify(commandPayload),
+			});
+			break;
+		}
+		case 'find-next': {
+			let findResult = window.find(message.text);
+			if (!findResult) {
+				if (hasFindResults(message.text)) {
+					findToBeginning(message.text);
+					findResult = true;
+				}
+			}
+			postParentMessage({
+				command: 'show-find-icon',
+				text: findResult,
+			});
+			break;
+		}
+		case 'find-prev': {
+			let findResult = window.find(message.text, false, true);
+			if (!findResult) {
+				if (hasFindResults(message.text)) {
+					findToEnd(message.text);
+					findResult = true;
+				}
+			}
+			postParentMessage({
+				command: 'show-find-icon',
+				text: findResult,
+			});
+			break;
+		}
+		default: {
+			if (
+				event.data.command != 'perform-url-check' &&
+				event.data.command != 'update-path'
+			) {
+				postParentMessage(event.data);
+			}
+		}
+	}
+}
+
+/**
+ * Handle errors from the parent (specifically for embedded preview).
+ * @param {any} event
+ */
+function handleError(event) {
+	const stackMessage = event.error.stack;
+	// stackMessages given in the form:
+	//    "errorType: errorMessage"
+	// Example:
+	//    "SyntaxError: Illegal newline after throw"
+	const errorType = stackMessage.split(':')[0];
+
+	// ignore errors such as SyntaxError, ReferenceError, etc
+	if (errorType === 'Error') {
+		const messagePayload = {
+			type: 'UNCAUGHT_ERROR',
+			data: stackMessage,
+		};
+		postParentMessage({
+			command: 'console',
+			text: JSON.stringify(messagePayload),
+		});
+	}
+}
+
+/**
+ * @param {string} searchString the string to search for.
+ * @returns whether this string has find results on the page.
+ */
+function hasFindResults(searchString) {
+	window.getSelection().removeAllRanges();
+	const canGoForward = window.find(searchString);
+	const canGoBack = window.find(searchString, false, true);
+	return canGoForward || canGoBack;
+}
+
+/**
+ * @param {string} searchString the string to search for.
+ * @returns move the find position to the beginning of the page.
+ */
+function findToBeginning(searchString) {
+	window.getSelection().removeAllRanges();
+	window.find(searchString);
+}
+
+/**
+ * @param {string} searchString the string to search for.
+ * @returns move the find position to the end of the page.
+ */
+function findToEnd(searchString) {
+	window.getSelection().removeAllRanges();
+	window.find(searchString, false, true);
+}
+
+/**
+ * Send message to the parent frame if this is an iframe (specifically for embedded preview).
+ * @param {any} data
+ */
+function postParentMessage(data) {
+	if (window.parent !== window) {
+		window.parent.postMessage(data, '*');
+	}
+}
+
+/**
+ * @description Monitor link clicks for non-injectable files (files that cannot be injected with this script) or for external links.
+ * Primarily for embedded previews.
+ * @param {string} linkTarget
+ */
+function handleLinkClick(linkTarget) {
+	const host = 'http://127.0.0.1:3000';
+	if (linkTarget && linkTarget != '' && !linkTarget.startsWith('javascript:')) {
+		if (!linkTarget.startsWith(host)) {
+			// The embedded preview does not support external sites; let the extension know that an external link has been
+			// opened in the embedded preview; this will open the modal to ask the user to navigate in an external browser
+			// and will force the embedded preview back to the previous page.
+			postParentMessage({ command: 'open-external-link', text: linkTarget });
+		} else {
+			// Check all local URLs to make sure to catch pages that won't be injectable
+			postParentMessage({ command: 'perform-url-check', text: linkTarget });
+		}
+	}
+}
+
+/**
+ * @description Show link preview on embedded preview.
+ * @param {string} linkTarget
+ */
+function handleLinkHoverStart(linkTarget) {
+	// In embedded preview, trigger the link preview.
+	postParentMessage({
+		command: 'link-hover-start',
+		text: linkTarget,
+	});
+}
+
+/**
+ * @description Hide link preview on embedded preview.
+ */
+function handleLinkHoverEnd() {
+	postParentMessage({
+		command: 'link-hover-end',
+	});
+}
+
+/**
+ * Reloads page when requested by a socket message or parent.
+ * Auto-reloading is prevented if the document body has a `data-server-no-reload` attribute.
+ */
+function reloadPage() {
+	const block = document.body
+		? document.body.hasAttribute('data-server-no-reload')
+		: false;
+	if (block) return;
+	window.location.reload();
+}
+ript…]()
