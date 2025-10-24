@@ -1,4 +1,4 @@
-[index.html](https://github.com/user-attachments/files/23126860/index.html)#Website-Personal
+[index.html](https://github.com/user-attachments/files/23126860/index.html)[halaman2.html](https://github.com/user-attachments/files/23127000/halaman2.html)#Website-Personal
 WEB
 [Uploa<!DOCTYPE html>
 <html lang="id">
@@ -96,343 +96,421 @@ WEB
 
 </body>
 </html>ding index.html…]()
+[Upl<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinik Rawat Inap Sidayu Medical Center</title>
+    <style>
+        body {
+            background-image: url('bg1.jpeg');    
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center center;
+            background-attachment: fixed; 
+        }  
 
-[Uploading ___vscode_livepreview_injected_sc/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-/* eslint-env browser */
+        .header {
+            background-color: #080730;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
 
-/**
- * Script injected by the VS Code Live Preview Extension.
- * http://aka.ms/live-preview
- */
+        .header .logo {
+            width: 120px; 
+            height: auto;
+            margin-bottom: 10px; 
+        }
 
-window.addEventListener('message', (event) => handleMessage(event), false);
-window.addEventListener('error', (event) => handleError(event), false);
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
 
-document.addEventListener('DOMContentLoaded', function (e) {
-	onLoad();
-});
-
-if (window.parent !== window) {
-	console.error = createConsoleOverride('ERROR');
-
-	console.log = createConsoleOverride('LOG');
-
-	console.warn = createConsoleOverride('WARN');
-
-	console.info = createConsoleOverride('INFO');
-
-	console.clear = createConsoleOverride('CLEAR');
+        .header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        .nama-class-list li {
+    text-align: center;
 }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .layanan-list ul { 
+        list-style: none; 
+        padding-left: 0;
+        }
+        .bacground-color{
+        margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+        }
+        
+        .layanan-list li {
+        margin-bottom: 5px;
+        }
+        
+        li {
+        display: flex;
+        align-items: center;
+        }
+        .ikon-centang {
+        margin-right: 5px;
+        }
+        .room-card {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap; 
+            margin: 0 auto; 
+            margin-bottom: 10px;
+            width: 90%; 
+            max-width: 600px; 
+        }
+        .list-2-kolom {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px 20px; 
+            list-style: none;
+            padding: 0;
+        }
+        .ugd-info {
+            background-color: #f10e47; 
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        
+        h2 {
+            color: #080730;
+            border-bottom: 3px solid #080730;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            font-size: 2em;
+        }
 
-/**
- * @description run initialization on load.
- */
-function onLoad() {
-	const connection = new WebSocket('ws://127.0.0.1:3001/47014df7b55553526ce0774d4df11a4a39e6a6a7');
-	connection.addEventListener('message', (e) => handleSocketMessage(e.data));
+        .room-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap; 
+        }
 
-	let onlyCtrlDown = false;
+        .room-card {
+            background-color: #e9f2fa; 
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+            padding: 25px;
+            width: 45px;
+            min-width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out;
+        }
 
-	const commandPayload = {
-		path: window.location,
-		title: document.title,
-	};
+        .room-card:hover {
+            transform: translateY(-5px); 
+        }
 
-	// In embedded preview, tell the webview panel which page it is on now.
-	postParentMessage({
-		command: 'update-path',
-		text: JSON.stringify(commandPayload),
-	});
+        .room-card h3 {
+            color: #080730;
+            font-size: 1.8em;
+            margin-top: 0,5px;
+        }
 
-	handleLinkHoverEnd();
+        .room-card .price {
+    
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #28a745; 
+            margin: px 0;
+            padding: 5px;
+            background-color: white;
+            border-radius: 5px;
+            display: inline-block;
+            
+        }
 
-	const links = document.getElementsByTagName('a');
-	for (const link of links) {
-		// In embedded preview, all link clicks must be checked to see if the target page can be injected with this file's script.
-		link.addEventListener('click', (e) => handleLinkClick(e.target.href));
-		link.addEventListener('mouseenter', (e) =>
-			handleLinkHoverStart(e.target.href)
-		);
-		link.addEventListener('mouseleave', () => handleLinkHoverEnd());
-	}
+        .room-card ul {
+            list-style: none;
+            padding-left: 0;
+            text-align: left;
+        }
 
-	document.addEventListener('keydown', (e) => {
-		onlyCtrlDown = (e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey;
-		if ((e.key == 'F' || e.key == 'f') && onlyCtrlDown) {
-			postParentMessage({
-				command: 'show-find',
-			});
-			return;
-		}
-		postParentMessage({
-			command: 'did-keydown',
-			key: {
-				key: e.key,
-				keyCode: e.keyCode,
-				code: e.code,
-				shiftKey: e.shiftKey,
-				altKey: e.altKey,
-				ctrlKey: e.ctrlKey,
-				metaKey: e.metaKey,
-				repeat: e.repeat,
-			},
-		});
-	});
+        .room-card ul li {
+            padding: 5px 0;
+            border-bottom: 1px dashed #ced4da;
+        }
 
-	document.addEventListener('keyup', (e) => {
-		onlyCtrlDown = (e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey;
-		postParentMessage({
-			command: 'did-keyup',
-			key: {
-				key: e.key,
-				keyCode: e.keyCode,
-				code: e.code,
-				shiftKey: e.shiftKey,
-				altKey: e.altKey,
-				ctrlKey: e.ctrlKey,
-				metaKey: e.metaKey,
-				repeat: e.repeat,
-			},
-		});
-	});
-}
+        .room-card ul li:last-child {
+            border-bottom: none;
+        }
+         body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa; 
+            padding: 30px;
+        }
+        
+        .service-card {
+            max-width: 350px; 
+            margin: 0 auto; 
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            border-top: 8px solid #080730;
+        }
 
-/**
- * Helper function to insert a `postParentMesssage` call into console function calls.
- * This will also send the printed information to the output channel if in embedded preview.
- * @param {string} type the type of console log (e.g. info, warn, error, etc.).
- */
-function createConsoleOverride(type) {
-	// Override console messages to allow the user to see console messages in the output channel (embedded preview only).
-	const consoleOverrides = {
-		ERROR: console.error,
-		LOG: console.log,
-		WARN: console.warn,
-		INFO: console.info,
-		CLEAR: console.clear,
-	};
-	return function (msg) {
-		let stringifiedMsg = 'undefined';
+        .service-card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
 
-		try {
-			stringifiedMsg = JSON.stringify(msg);
-			if (!stringifiedMsg) throw new Error('message is not in JSON format');
-		} catch (err) {
-			try {
-				stringifiedMsg = msg.toString();
-			} catch (err) {
-				// noop
-			}
-		}
+        .icon-large {
+            font-size: 3.5em; 
+            color: #080730;
+            margin-bottom: 10px;
+            display: block;
+        }
 
-		const messagePayload = {
-			type: type,
-			data: stringifiedMsg,
-		};
-		postParentMessage({
-			command: 'console',
-			text: JSON.stringify(messagePayload),
-		});
-		consoleOverrides[type].apply(console, arguments);
-	};
-}
+        .service-card h3 {
+            font-size: 1.8em;
+            color: #343a40;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
 
-/**
- * Handle reload requests from WebSocket server.
- * @param {any} data
- */
-function handleSocketMessage(data) {
-	const parsedMessage = JSON.parse(data);
-	switch (parsedMessage.command) {
-		case 'reload': {
-			reloadPage();
-		}
-	}
-}
+        .service-description {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: left;
+        }
 
-/**
- * Handle messages from the parent (specifically for embedded preview).
- * @param {any} event
- */
-function handleMessage(event) {
-	const message = event.data;
+        .facility-list {
+            list-style: none;
+            padding-left: 0;
+            text-align: left;
+            margin-top: 10px;
+            text-align: left;
+        }
 
-	switch (message.command) {
-		case 'refresh':
-			reloadPage();
-			break;
-		case 'refresh-forced':
-			window.location.reload();
-			break;
-		case 'setup-parent-listener': {
-			const commandPayload = {
-				path: window.location,
-				title: document.title,
-			};
+        .facility-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            color: #333;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+        }
 
-			postParentMessage({
-				command: 'update-path',
-				text: JSON.stringify(commandPayload),
-			});
-			break;
-		}
-		case 'find-next': {
-			let findResult = window.find(message.text);
-			if (!findResult) {
-				if (hasFindResults(message.text)) {
-					findToBeginning(message.text);
-					findResult = true;
-				}
-			}
-			postParentMessage({
-				command: 'show-find-icon',
-				text: findResult,
-			});
-			break;
-		}
-		case 'find-prev': {
-			let findResult = window.find(message.text, false, true);
-			if (!findResult) {
-				if (hasFindResults(message.text)) {
-					findToEnd(message.text);
-					findResult = true;
-				}
-			}
-			postParentMessage({
-				command: 'show-find-icon',
-				text: findResult,
-			});
-			break;
-		}
-		default: {
-			if (
-				event.data.command != 'perform-url-check' &&
-				event.data.command != 'update-path'
-			) {
-				postParentMessage(event.data);
-			}
-		}
-	}
-}
+        .check-icon {
+            color: #28a745; 
+            margin-right: 8px;
+            font-weight: bold;
+        }
+        
+        .room-card {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap; 
+            margin: 0 auto; 
+            margin-bottom: 10px;
+            width: 90%; 
+            max-width: 600px; 
+        }
+        .list-2-kolom {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px 20px; 
+            list-style: none;
+            padding: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #080730;
+            color: white;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="LOGO SMC.png" alt="Logo Sidayu Medical Center">
+        <h1>KLINIK RAWAT INAP</h1>
+        <p>Sidayu Medical Center</p>
+    </div>
+            <header style="text-align: center; margin-bottom: 30px;">
+                <h2>Tentang Kami</h2>
+                <p>Klinik Sidayu Medical Center adalah fasilitas pelayanan kesehatan yang menyelenggarakan pelayanan kesehatan perorangan yang tidak hanya menyediakan pelayanan medis dasar atau spesialistik rawat jalan, tetapi juga memiliki
+                   fasilitas dan izin untuk memberikan pelayanan rawat inap dalam batasan tertentu. 
+                   Klinik ini merupakan suatu fasilitas pelayanan kesehatan yang sangatlah dicari serta bermanfaat bagi masyarakat yang sedang membutuhkan perawatan, 
+                   klinik merupakan tempat bagi pasien yang ingin mendapatkan obat – obatan yang sesuai dengan sakit yang dialaminya, 
+                   dan dapat konsultasi serta memperoleh nasihat medis. </p>
+       </div>
+    <div class="container">
+        <div class="foto-container"> 
+            <img src="smc2.png" width="500px"alt="Foto Ketiga">
+        </div>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 30px 0;">
+    <div class="room-card">
+    <div class="lab-options-card">
+    <h2>Jenis Pelayanan Yang Tersedia:</h2>
+    <ul class="list-2-kolom">
+        <li>✅Layanan medis dasar/rawat jalan</li>
+        <li>✅Layanan rawat inap</li>
+        <li>✅Tindakan IGD</li>
+        <li>✅Cek laboratorium</li>
+        <li>✅Pembuatan SKD</li>
+        <li>✅Pengurusan Jenazah</li>
+        <li>✅Ambulance</li>
+        <li>✅Pelayanan kefarmasian</li>
+        <li>✅Pelayanan lain-lain</li>
+    </ul>
+    </div>
+    </div>
+             <h1 class="jarak-bawah"> 
+               <hr style="border: 0; border-top: 1px solid #080730; margin: 30px 0;">
+              
+        <div class="ugd-info">
+            PELAYANAN GAWAT DARURAT (UGD) 24 JAM 🚑
+        </div>
+       
+        <p style="text-align: center; font-size: 0.8 em; color: #080730;">
+            Kami berkomitmen untuk memberikan pelayanan rawat inap terbaik dengan fasilitas yang nyaman dan tenaga medis profesional.
+        </p>
 
-/**
- * Handle errors from the parent (specifically for embedded preview).
- * @param {any} event
- */
-function handleError(event) {
-	const stackMessage = event.error.stack;
-	// stackMessages given in the form:
-	//    "errorType: errorMessage"
-	// Example:
-	//    "SyntaxError: Illegal newline after throw"
-	const errorType = stackMessage.split(':')[0];
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 30px 0;">
 
-	// ignore errors such as SyntaxError, ReferenceError, etc
-	if (errorType === 'Error') {
-		const messagePayload = {
-			type: 'UNCAUGHT_ERROR',
-			data: stackMessage,
-		};
-		postParentMessage({
-			command: 'console',
-			text: JSON.stringify(messagePayload),
-		});
-	}
-}
+        <h2>Pilihan Kelas Rawat Inap</h2>
 
-/**
- * @param {string} searchString the string to search for.
- * @returns whether this string has find results on the page.
- */
-function hasFindResults(searchString) {
-	window.getSelection().removeAllRanges();
-	const canGoForward = window.find(searchString);
-	const canGoBack = window.find(searchString, false, true);
-	return canGoForward || canGoBack;
-}
+        <div class="room-grid">
+            
+            <div class="room-card">
+                <h3>Kelas 1 (Eksklusif)</h3>
+                <p class="price">Rp 150.000 / Hari</p>
+                <ul>
+                    <h4>FASILITAS :</h4>
+                    <li>✅ *Kapasitas: 1 Pasien per Kamar*</li>
+                    <li>✅ Kamar mandi dalam</li>
+                    <li>✅ Kipas Angin</li>
+                    <li>✅ Televisi</li>
+                    <li>✅ Loker/Lemari pribadi</li>
+                </ul>
+                <p style="margin-top: 20px; color: #080730;">*Kenyamanan pribadi maksimal untuk pemulihan optimal.</p>
+            </div>
 
-/**
- * @param {string} searchString the string to search for.
- * @returns move the find position to the beginning of the page.
- */
-function findToBeginning(searchString) {
-	window.getSelection().removeAllRanges();
-	window.find(searchString);
-}
+            <div class="room-card">
+                <h3>Kelas 2 (Semi-Privat)</h3>
+                <p class="price">Rp 100.000 / Hari</p>
+                <ul>
+                    <h4>FASILITAS :</h4>
+                    <li>✅ *Kapasitas: 2 Pasien per Kamar*</li>
+                    <li>✅ Tirai pembatas antar pasien</li>
+                    <li>✅ Kamar mandi dalam</li>
+                    <li>✅ Kipas angin</li>
+                    <li>✅ Loker/Lemari pribadi</li>
+                </ul>
+                <p style="margin-top: 20px; color: #080730;">*Fasilitas lengkap dengan harga yang lebih terjangkau.</p>
+            </div>
+        </div>
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 30px 0;">
+        <div class="service-container"> 
+    
+    <div class="service-card-lab">
+        <div class="lab-header">
+            <h2>🧪Laboratorium </h2>
+                <div class="room-card">
+                    <div class="lab-options-card">
+                    <h4>Pilihan Cek Lab :</h4>
+                    <ul class="list-2-kolom">
+                       <li>✅ Pemeriksaan darah rutin</li>
+                       <li>✅ Pemeriksaan gula darah</li>
+                       <li>✅ Pemeriksaan kolesterol</li>
+                       <li>✅ Pemeriksaan asam urat</li>
+                       <li>✅ Pemeriksaan kehamilan</li>
+                       <li>✅ Pemeriksaan widal</li>
+                       <li>✅ Pemeriksaan urine Lengkap</li>
+                       <li>✅ Pemeriksaan narkoba</li>
+                       <li>✅ Pemeriksaan antigen</li>
+                       <li>✅ Pemeriksaan penunjang lainnya.</li>
+                    </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+      <hr style="border: 0; border-top: 1px solid #ccc; margin: 30px 0;">
+        <h2>Informasi Tambahan</h2>
+        <p>Untuk informasi ketersediaan kamar dan reservasi, silakan hubungi kontak kami di bawah ini.</p>
+    
+            <p>
+                <span style="margin-right: 8px;">📞</span>
+                Contact Person : +62 823-2267-2226
+            </p>
 
-/**
- * @param {string} searchString the string to search for.
- * @returns move the find position to the end of the page.
- */
-function findToEnd(searchString) {
-	window.getSelection().removeAllRanges();
-	window.find(searchString, false, true);
-}
+            <p>
+                <span style="margin-right: 8px;">📧</span>
+                Gmail : kliniksidayumedicalcenter.gmail.com
+            </p>
+            <a href="https://www.instagram.com/kliniksidayumedicalcenter/#">Instagram klinik sidayu medical center</a>
+            <hr style="border: 0; border-top: 1px solid #ccc; margin: 30px 0;">
+    <h2>Lokasi Klinik Sidayu Medical Center</h2>
+    <img src="lokasi.png" alt="Foto keempat">
+        <div class="kolom-motivasi">
+            <h2>
+        </div>
 
-/**
- * Send message to the parent frame if this is an iframe (specifically for embedded preview).
- * @param {any} data
- */
-function postParentMessage(data) {
-	if (window.parent !== window) {
-		window.parent.postMessage(data, '*');
-	}
-}
+        <div class="wadah-teks">       
+            
+            <h1 style="font-size: 36px; color: #080730;">"Kesembuhan dan keselamatan anda adalah prioritas kami"</h1>
+        </div>
+        <div class="wadah-foto">
+        <header style="text-align: center; margin-bottom: 30px;">   
+    <img src="e.jpeg" alt="Foto Pertama" width="250px">
+    <img src="i.jpeg" alt="Foto Kedua" width="250px">
+    <img src="s.jpeg" alt="Foto Ketiga" width="250px">
+</div>
+    <div class="footer">
+        &copy; 2025 Sidayu Medical Center. Semua Hak Dilindungi.
+    </div>
+</body>
+</html>
+oading halaman2.html…]()
+<img width="444" height="303" alt="lokasi" src="https://github.com/user-attachments/assets/e8ed21a2-5854-4ac6-b118-1788225a7651" />
+<img width="473" height="528" alt="LOGO SMC" src="https://github.com/user-attachments/assets/a60f2857-1188-4540-b04c-88b7fbbd4265" />
+<img width="900" height="691" alt="smc2" src="https://github.com/user-attachments/assets/a95877d1-e467-4f54-bda1-5d4f65ca6f6b" />
+![s](https://github.com/user-attachments/assets/3413c44a-1ca8-4e15-9f9f-594c9d4acf34)
+![alatmedis](https://github.com/user-attachments/assets/b77863e0-33b2-4bc1-a8f2-9f8c06468e00)
+![e](https://github.com/user-attachments/assets/c2569747-a9f0-4e42-9cfa-c47af8ce367c)
+![bg1](https://github.com/user-attachments/assets/ce5ec6cb-7674-4372-a0d3-57ae13934ccf)
+![i](https://github.com/user-attachments/assets/057f66c2-e651-41c0-ba45-0b950ed09490)
 
-/**
- * @description Monitor link clicks for non-injectable files (files that cannot be injected with this script) or for external links.
- * Primarily for embedded previews.
- * @param {string} linkTarget
- */
-function handleLinkClick(linkTarget) {
-	const host = 'http://127.0.0.1:3000';
-	if (linkTarget && linkTarget != '' && !linkTarget.startsWith('javascript:')) {
-		if (!linkTarget.startsWith(host)) {
-			// The embedded preview does not support external sites; let the extension know that an external link has been
-			// opened in the embedded preview; this will open the modal to ask the user to navigate in an external browser
-			// and will force the embedded preview back to the previous page.
-			postParentMessage({ command: 'open-external-link', text: linkTarget });
-		} else {
-			// Check all local URLs to make sure to catch pages that won't be injectable
-			postParentMessage({ command: 'perform-url-check', text: linkTarget });
-		}
-	}
-}
 
-/**
- * @description Show link preview on embedded preview.
- * @param {string} linkTarget
- */
-function handleLinkHoverStart(linkTarget) {
-	// In embedded preview, trigger the link preview.
-	postParentMessage({
-		command: 'link-hover-start',
-		text: linkTarget,
-	});
-}
 
-/**
- * @description Hide link preview on embedded preview.
- */
-function handleLinkHoverEnd() {
-	postParentMessage({
-		command: 'link-hover-end',
-	});
-}
 
-/**
- * Reloads page when requested by a socket message or parent.
- * Auto-reloading is prevented if the document body has a `data-server-no-reload` attribute.
- */
-function reloadPage() {
-	const block = document.body
-		? document.body.hasAttribute('data-server-no-reload')
-		: false;
-	if (block) return;
-	window.location.reload();
-}
-ript…]()
+
